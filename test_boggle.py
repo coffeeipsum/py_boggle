@@ -70,7 +70,6 @@ class TestBoggle(unittest.TestCase):
         neighbours = boggle.all_grid_neighbours(grid)
         self.assertEqual(len(neighbours), len(grid))
         for pos in grid:
-            others = list(grid)  #creates a new list from dictionarys's keys
-            others = remove(pos)
+            others = list(grid)  # creates a new list from the dictionary's keys
+            others.remove(pos)
             self.assertListEqual(sorted(neighbours[pos]), sorted(others))
-            
