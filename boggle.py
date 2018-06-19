@@ -90,9 +90,13 @@ def search(grid, dictionary):
 def get_dictionary(dictionary_file):
     """
     Load Dictionary file
+    We're turning a list into a set 
+        # list [] versus set{ }
     """
     with open(dictionary_file) as f:
-        return [w.strip().upper() for w in f]
+        return {w.strip().upper() for w in f} 
+        # turning a list into a set 
+        # list [] versus set{ }
       
         
 def main():
